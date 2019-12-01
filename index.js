@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const multer = require('multer')
 const upload = multer()
 const PORT = 5000
-
 const mongoose = require('mongoose').mongoURI
 //  DB config
 const db = require('./config/keys')
