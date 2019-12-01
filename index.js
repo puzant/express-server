@@ -5,7 +5,18 @@ const multer = require('multer')
 const upload = multer()
 const PORT = 5000
 
+const mongoose = require('mongoose').mongoURI
+//  DB config
+const db = require('./config/keys')
 const router = require('./router.js')
+
+//  connect to MongoDB
+// mongoose.connect(db).then(() => {
+//   console.log('MongoDB successfuly connected')
+// }).catch(err => {
+//   console.log(err);
+//   console.log('\x1b[31m\x1b[1m MongoDB Not Connected')
+// })
 
 app.set('view engine', 'pug')
 
