@@ -1,6 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
+router.post('/main', (req, res) => {
+  console.log(req.body)
+  res.send('your request was recivied')
+})
+
 router.get('/main', (req, res) => {
   res.render('main', 
   { title: 'Hey',
@@ -24,7 +29,7 @@ router.get('/:id', (req, res) => {
 
 //  dynamic route with name & id as req.params
 router.get('/:name/:id', (req, res) => {
-  res.send("Name is: " + req.params.name  + "ID is: " + req.params.id)
+  res.send("Name is: " + req.params.name  + ', ' + "ID is: " + req.params.id)
 })
 
 module.exports = router
